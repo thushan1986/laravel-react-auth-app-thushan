@@ -12,6 +12,8 @@ class UserController extends Controller
 {
     public function userSignIn(Request $request): JsonResponse
     {
+
+      Log::info('work');
       $user = User::where('email', $request->email)->first();
 
       if (! $user){
